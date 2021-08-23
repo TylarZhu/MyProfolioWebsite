@@ -1,0 +1,202 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center">
+            <span style="font-size: 35px; color: tomato;" id="titleIcon">
+                <i class="fad fa-code"></i>
+            </span>
+            <h4><kbd><kbd>Tylar's Webpage</kbd></kbd></h4>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        About Me
+                        <i class="fad fa-info-circle text-danger"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center" routerLink="/aboutMe">
+                                My Note
+                                <i class="fad fa-heart text-danger"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center" routerLink="/resume">
+                                Resume
+                                <i class="fad fa-file-user text-danger"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center" routerLink="#">
+                                Portfolio
+                                <i class="fad fa-pen text-danger"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                        My Code
+                        <i class="fad fa-hashtag text-dark"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                        <li>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center" href="https://github.com/TylarZhu?tab=repositories">
+                              Github
+                              <i class="fab fa-github text-dark"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex justify-content-between align-items-center" href="https://www.face2facehomechurch.com:3000/">
+                                Face2Face
+                                <i class="fad fa-cross text-dark"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-light submitStyle" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Leave a Comment
+                        <i class="fad fa-address-card text-primary"></i>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/discussion">
+                        Comments Board
+                        <i class="fad fa-comments-alt text-success"></i>  
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/map">
+                        Radar
+                        <i class="fad fa-radar"></i> 
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="inputEmail4" #firstName>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="inputPassword4" #lastName>
+                    </div>
+                    <div class="col-12">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" #email>
+                    </div>
+                    <div class="col-12">
+                        <label for="exampleFormControlTextarea1" class="form-label"> Comment</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" #comment></textarea>
+                    </div>
+                    <div class="col-12 text-end">
+                        <button type="submit" (click)="submit(firstName.value, lastName.value, email.value, comment.value)" class="btn btn-outline-primary">
+                            submit
+                            <i class="fad fa-upload"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<video class="video-background" src="https://player.vimeo.com/external/545879091.hd.mp4?s=84c12e5cd49910dab26721bcf6d0927851f3dde7&profile_id=175"
+    loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
+
+<div class="overlay"></div>
+<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <span style="font-size: 100px; color: Dodgerblue;">
+        <i class="fad fa-terminal"></i>
+    </span>
+    <div class="typewriterUnder">
+        <h1 class="text-light"> <span class="text-success">Hello World!</span> Welcome To My Portfolio.</h1>
+    </div>
+    <div class="typewriter">
+        <h1 class="text-light"> <span class="text-warning"> Xingyuan Presents! </span></h1>
+    </div>
+</div>
+
+<div class="container pb-5">
+    <h1 class="py-5"> Contact Information </h1>
+    <div class="row">
+        <div class="col">
+            <div class="d-flex justify-content-start align-items-center">
+                <span style="font-size: 30px; color: Mediumslateblue;" id="phoneIcon">
+                    <i class="fad fa-phone"></i>
+                </span>
+                <h4>Phone Number</h4>
+            </div>
+            <div>
+                <h4>(+1)416-834-6842</h4>
+            </div>
+        </div>
+
+        <div class="col pr-5">
+            <div class="d-flex justify-content-start align-items-center">
+                <span style="font-size: 30px; color: Mediumslateblue;" id="phoneIcon">
+                    <i class="fad fa-envelope-open-text"></i>
+                </span>
+                <h4>Email</h4>
+            </div>
+            <div>
+                <h4>zhuxingyuan.jobs@outlook.com</h4>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="d-flex justify-content-start align-items-center">
+                <span style="font-size: 30px; color: Mediumslateblue;" id="phoneIcon">
+                    <i class="fab fa-linkedin"></i>
+                </span>
+                <h4>LinkedIn</h4>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/xingyuan-tylar-zhu-613ab4208/">
+                    <h4>My Profile</h4>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="container-fluid" id="mapSector">
+    <div class="container pb-5">
+        <h1 class="py-5 text-light"> My Address </h1>
+        <div class="row">
+            <div class="col">
+                <!-- <app-map></app-map> -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.954289874281!2d-79.25515346734205!3d43.77380768121003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d1af4399308d%3A0x40d590f423b10ffd!2zNzAgVG93biBDZW50cmUgQ291cnQsIFNjYXJib3JvdWdoLCBPTiBNMVAgMEIy5Yqg5ou_5aSn!5e0!3m2!1szh-CN!2sus!4v1620824233223!5m2!1szh-CN!2sus" width="600px" height="300px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="col">
+                <h4 class="text-light">Address: 70 Town Centre Court, Scarborough, ON</h4>
+                <h4 class="text-light">Postal code: M1P 0B2</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid d-flex justify-content-center align-items-center px-3 py-3" id="copyright">
+    <p class="text-light"> Copyright © 2021 - Xingyuan Zhu</p>
+</div>
+
+

@@ -1,0 +1,21 @@
+agm-map {
+    position: absolute;
+    right: 0px;  
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 22;
+    opacity: 0.55;
+}
+
+.overlay{
+    position:absolute;
+    right: 0px;  
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background: no-repeat center transparent url('../../assets/radarBackground.png');
+    background-size: 1050px 1050px;
+    z-index: -1;
+    
+}

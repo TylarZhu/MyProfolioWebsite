@@ -1,0 +1,11 @@
+.h-divider{
+    margin-top:3px;
+    margin-bottom:5px;
+    height:1px;
+    width:100%;
+    border-top:2px solid gray;
+}
+
+#copyright {
+    background-color: rgb(65, 60, 60);
+}

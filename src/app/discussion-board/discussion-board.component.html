@@ -1,0 +1,60 @@
+<div class="container pb-5">
+    <div class="d-flex justify-content-between align-items-center">
+        <button class="btn" (click)="goBack()">
+            <span style="font-size: 50px; color: tomato;" id="titleIcon">
+                <i class="fad fa-arrow-circle-left"></i>
+            </span>
+        </button>
+    </div>
+
+    <div class="card shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+        <div class="card-body pb-3" id="commentSection">
+            <h1>
+                Comment Board
+                <span style="color: rgb(238, 104, 209);" id="titleIcon">
+                    <i class="fad fa-comments"></i>
+                </span>   
+            </h1>
+            <div *ngIf="users.length > 0; then showUsers else showNoComment"></div>
+            <ng-template #showUsers>
+                <div *ngFor="let user of users">
+                    <hr/>
+                    <div class="row">
+                        <p class="col fs-3">
+                            <i class="fad fa-user"></i>
+                            {{user.firstname}}
+                        </p>
+                    </div>
+                    <div class="row">
+                        <p class="fs-4">{{user.comment}}</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-end d-flex justify-content-end align-items-center">
+                            <button type="button" class="btn btn-outline-primary position-relative btn-lg" (click)="likes(user.email)">
+                                <i class="fad fa-thumbs-up"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    <div *ngIf="user.likes > 99; then showPlus else hidePlus"></div>
+                                    <ng-template #showPlus> 99+ </ng-template>
+                                    <ng-template #hidePlus> {{user.likes}} </ng-template>
+                                </span>
+                            </button>
+
+                            <div class="px-3"></div>
+
+                            <button type="button" class="btn btn-outline-primary position-relative btn-lg" (click)="unlikes(user.email)">
+                                <i class="fad fa-thumbs-down"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    {{user.unlikes}}
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template #showNoComment>
+                <hr/>
+                <p class="fs-3 text-muted d-flex justify-content-center align-items-center"> There is no comment!</p>
+            </ng-template>            
+        </div>
+    </div>
+</div>
